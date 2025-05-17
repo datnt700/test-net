@@ -1,0 +1,43 @@
+﻿@model WebApplication1.Models.ViewModels.HomeIndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section>
+    <div class="container">
+        <div class="filter"></div>
+        <div class="list">
+            <a class="btn btn-primary mb-3" href="/Cours/Create">Ajouter un Cours</a>
+            <div class="header">
+                <h3>List of all courses</h3>
+                <span>24 courses available</span>
+            </div>
+            <div class="d-flex flex-column g-2">
+                @if (Model.Courses != null)
+                {
+                    @foreach (var course in Model.Courses)
+                    {
+                        <div class="card border-bottom-1" style="width: 18rem;">
+                            <img src="img/pic1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">@course.Title</h5>
+                                <p class="card-text">@course.Description</p>
+                                <p class="card-text">@course.Rating</p>
+                                <p class="card-text">@course.Prix</p>
+                                <a asp-controller="Cours" asp-action="Edit" asp-route-id="@course.Id"  class="btn btn-sm btn-warning">Modifier</a>
+                                <form asp-controller="Cours" asp-action="Delete" asp-route-id="@course.Id" method="post" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer ??')" style="display:inline;">
+                                    <button type="submit" class="btn btn-sm btn-danger">Supprimer</button>
+                                </form>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p>No course available.</p>
+                }
+             
+            </div>
+        </div>
+    </div>
+</section>

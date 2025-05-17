@@ -1,0 +1,33 @@
+@model WebApplication1.Models.ViewModels.CourseFormViewModel
+
+@{
+}
+
+<form asp-controller="Cours" asp-action="Edit" method="post">
+
+    <div class="mb-3">
+        <label for="Title" class="form-label">Title</label>
+        <input asp-for="Title" type="text" class="form-control" id="Title" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <input asp-for="Description" type="text" class="form-control" id="Description">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="Prix">Prix</label>
+        <input asp-for="Prix" type="text" class="form-control" id="Prix">
+    </div>
+    <div class="mb-3 ">
+        <label class="form-label" for="Rating">Rating</label>
+        <input asp-for="Rating" type="text" class="form-control" id="Rating">
+    </div>
+    <div class="mb-3">
+        <label asp-for="CategoryId" class="form-label">Category</label>
+        <select asp-for="CategoryId" asp-items="Model.Categories" class="form-control">
+            <option value="">-- Chọn danh mục --</option>
+            <option value="1">Free</option>
+        </select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
