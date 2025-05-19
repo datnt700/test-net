@@ -1,0 +1,16 @@
+@model IEnumerable<WebApplication1.Models.SoleLayer>
+
+@foreach (var layer in Model)
+{
+    <div class="card mb-3">
+        <div class="card-header">@layer.LayerType</div>
+        <div class="card-body">
+            <p><strong>Élément:</strong> @layer.ElementName (@layer.ElementCode)</p>
+            <p><strong>Matériau:</strong> @layer.MaterialName (@layer.MaterialCode)</p>
+            <p><strong>Densité:</strong> @layer.Density</p>
+            <p><strong>Épaisseur:</strong> @layer.Thickness</p>
+            <p><strong>Finition:</strong> @layer.FinishType</p>
+            <p><strong>Commentaire:</strong> @layer.Comment</p>
+        </div>
+    </div>
+}

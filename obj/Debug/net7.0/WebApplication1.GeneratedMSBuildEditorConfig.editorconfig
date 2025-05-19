@@ -24,6 +24,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnMvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/user/RiderProjects/WebApplication1/WebApplication1/Views/Cours/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/RiderProjects/WebApplication1/WebApplication1/Views/Cours/_CourseTablePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnMvX0NvdXJzZVRhYmxlUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/user/RiderProjects/WebApplication1/WebApplication1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,8 +44,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/user/RiderProjects/WebApplication1/WebApplication1/Views/Shared/_Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19NZW51LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/user/RiderProjects/WebApplication1/WebApplication1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/RiderProjects/WebApplication1/WebApplication1/Views/SoleConfiguration/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29sZUNvbmZpZ3VyYXRpb24vRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/RiderProjects/WebApplication1/WebApplication1/Views/SoleConfiguration/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29sZUNvbmZpZ3VyYXRpb24vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/RiderProjects/WebApplication1/WebApplication1/Views/SoleConfiguration/_MainPieces.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29sZUNvbmZpZ3VyYXRpb24vX01haW5QaWVjZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/RiderProjects/WebApplication1/WebApplication1/Views/SoleConfiguration/_SidebarModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29sZUNvbmZpZ3VyYXRpb24vX1NpZGViYXJNb2RlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/user/RiderProjects/WebApplication1/WebApplication1/Views/SoleConfiguration/_SidebarOptions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29sZUNvbmZpZ3VyYXRpb24vX1NpZGViYXJPcHRpb25zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/user/RiderProjects/WebApplication1/WebApplication1/Views/_ViewImports.cshtml]

@@ -25,4 +25,6 @@ public class ApplicationDbContext: DbContext
     //     Cho phép bạn dùng LINQ hoặc các phương thức như Add(), Remove(), Find(), ToList() để thao tác với bảng tương ứng trong database.
     public DbSet<Category> Categories { get; set; }
     public DbSet<Cours> Courses { get; set; }
+    public DbSet<SoleConfiguration> SoleConfigurations { get; set; }
+    public DbSet<SoleLayer> SoleLayers { get; set; }
 }

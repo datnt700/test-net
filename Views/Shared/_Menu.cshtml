@@ -1,0 +1,23 @@
+@{
+    var current = ViewBag.Active as string ?? "";
+}
+
+<div class="d-flex flex-wrap" style="width: 200px;">
+    @foreach (var item in new[] {
+                  new { Name = "Accueil", Controller = "Home", Action = "Index" },
+                  new { Name = "Projets", Controller = "SoleConfiguration", Action = "Index" },
+                  new { Name = "Modèles", Controller = "Home", Action = "Modeles" },
+                  new { Name = "Pièces", Controller = "Home", Action = "Pieces" }
+              })
+    {
+        var isActive = current == item.Name;
+        var bg = isActive ? "bg-danger" : "bg-dark";
+        var url = Url.Action(item.Action, item.Controller);
+        <a href="@url" class="text-white text-center text-decoration-none p-3" style="width: 50%;">
+            <div class="@bg rounded d-flex flex-column align-items-center justify-content-center" style="height: 100px;">
+                <div class="bg-white rounded-circle mb-2" style="width: 40px; height: 40px;"></div>
+                <span>@item.Name</span>
+            </div>
+        </a>
+    }
+</div>

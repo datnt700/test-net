@@ -16,6 +16,11 @@ public class CoursController : Controller
         _context = context;
     }
     // GET
+    public IActionResult Index()
+    {
+        ViewBag.Active = "Accueil";
+        return View();
+    }
 
     public IActionResult Create()
     {
@@ -97,5 +102,18 @@ public class CoursController : Controller
         _context.SaveChanges();
         return RedirectToAction("Index", "Home");
     }
-    
+    [HttpGet]
+    public IActionResult GetCoursesByCategory(string category)
+    {
+        var categoryId = _context.Categories
+            .Where(c => c.Name == category)
+            .Select(c => c.Id)
+            .FirstOrDefault();
+
+        var courses = _context.Courses
+            .Where(c => c.CategoryId == categoryId)
+            .ToList();
+
+        return PartialView("_CourseTablePartial", courses); // Trả về HTML
+    }
 }

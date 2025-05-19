@@ -1,0 +1,23 @@
+@model List<WebApplication1.Models.Cours>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Tiêu đề</th>
+        <th>Mô tả</th>
+        <th>Rating</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var course in Model)
+    {
+        <tr>
+            <td>@course.Id</td>
+            <td>@course.Title</td>
+            <td>@course.Description</td>
+            <td>@course.Rating</td>
+        </tr>
+    }
+    </tbody>
+</table>

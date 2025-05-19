@@ -1,0 +1,31 @@
+@model WebApplication1.Models.SoleConfiguration
+@{
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar trái -->
+        <div class="col-md-2">
+            @Html.Partial("_SidebarModel", Model)
+        </div>
+
+        <!-- Phần chính -->
+        <div class="col-md-7">
+            @Html.Partial("_MainPieces", Model.Layers)
+        </div>
+
+        <!-- Sidebar phải -->
+        <div class="col-md-3">
+            @Html.Partial("_SidebarOptions", Model)
+        </div>
+    </div>
+</div>
+</body>
+</html>

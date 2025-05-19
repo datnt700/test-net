@@ -1,0 +1,51 @@
+@model WebApplication1.Models.SoleConfiguration
+
+@{
+    ViewData["Title"] = "Sole Configuration Details";
+}
+
+<h2>@Model.ConfigurationName</h2>
+<p><strong>Type:</strong> @Model.SoleType</p>
+<p><strong>Template:</strong> @Model.Template</p>
+<p><strong>Sizes:</strong> @Model.ShoeSizeRange</p>
+
+<hr />
+<h4>📦 Layers in this configuration</h4>
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Layer Type</th>
+        <th>Element</th>
+        <th>Material</th>
+        <th>Density</th>
+        <th>Thickness</th>
+        <th>Finish</th>
+        <th>Comment</th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (Model.Layers != null && Model.Layers.Any())
+    {
+        int i = 1;
+        foreach (var layer in Model.Layers)
+        {
+            <tr>
+                <td>@(i++)</td>
+                <td>@layer.LayerType</td>
+                <td>@layer.ElementName</td>
+                <td>@layer.MaterialName</td>
+                <td>@layer.Density</td>
+                <td>@layer.Thickness</td>
+                <td>@layer.FinishType</td>
+                <td>@layer.Comment</td>
+            </tr>
+        }
+    }
+    else
+    {
+        <tr><td colspan="8" class="text-muted">No layers found.</td></tr>
+    }
+    </tbody>
+</table>

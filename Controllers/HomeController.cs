@@ -19,6 +19,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewBag.Active = "Accueil";
         var courses = _context.Courses.ToList(); 
         var viewModel = new HomeIndexViewModel
         {
@@ -26,6 +27,8 @@ public class HomeController : Controller
         };
         return View(viewModel);
     }
+
+
 
     public IActionResult Privacy()
     {
