@@ -9,6 +9,10 @@ namespace WebApplication1.Controllers;
 
 public class CoursController : Controller
 {
+//Thành phần	Ý nghĩa
+//private readonly ApplicationDbContext _context;	Tạo một biến để lưu lại context
+//public CoursController(ApplicationDbContext context)	Constructor nhận context từ hệ thống DI của ASP.NET Core
+//_context = context;	Gán giá trị được inject vào biến nội bộ để dùng trong controller
     private readonly ApplicationDbContext _context;
 
     public CoursController(ApplicationDbContext context)
