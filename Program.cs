@@ -3,6 +3,10 @@ using WebApplication1.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// builder.Services	Truy cập vào dịch vụ Dependency Injection container trong ASP.NET Core
+// AddDbContext<ApplicationDbContext>()	Đăng ký ApplicationDbContext để nó có thể được inject ở các nơi khác
+// options => options.UseSqlite(...)	Cấu hình để EF Core biết dùng SQLite làm database provider
+// builder.Configuration.GetConnectionString("DefaultConnection")	Lấy chuỗi kết nối từ appsettings.json phần "ConnectionStrings"
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
